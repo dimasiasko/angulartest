@@ -1,1 +1,33 @@
-<p>edit-photocard works!</p>
+<h1>Photocard Details</h1>
+<div class="container">
+
+    <div class="cards-container">
+
+        <div class="cards-form">
+            <div class="card-span" *ngFor="let comment of comments">
+                <span>{{comment}}</span>
+            </div>
+            <form #form="ngForm" (ngSubmit)="onSubmit()">
+                <div class="form-group mb-4">
+                    <label style="margin-top: 1em;" for="">Type Your Comment About This Picture :)</label>
+                    <input type="text" name="comment"  #comment="ngModel"
+                        [(ngModel)]="singleComment">
+                </div>
+                <div class="form-group mb-3">
+                    <button type="submit" class="btn btn-success">Add Comment</button>
+                </div>
+            </form>
+        </div>
+
+
+
+        <div class="card-image">
+            <div>
+                <img width="400px" height="400px" src="{{photocardDetails.url}}">
+            </div>
+        </div>
+
+
+    </div>
+
+</div>

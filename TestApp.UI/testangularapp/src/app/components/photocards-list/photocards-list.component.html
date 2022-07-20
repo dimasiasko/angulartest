@@ -4,9 +4,10 @@
 <div>
   <div class="container">
 
-    <div class="card" (click)="editCard()">
-      <img width="150px" height="150px" >
+    <div class="card-item"  *ngFor="let card of photocards">
+      <div [routerLink]="['/photocards', 'edit', card.id]">
+        <img width="150px" height="150px" src={{card.url}} >
+      </div>
     </div>
-
   </div>
 </div>

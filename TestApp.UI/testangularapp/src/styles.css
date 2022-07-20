@@ -27,8 +27,8 @@ p {
     text-align: center;
 }
 
-.card {
-    background-color: #fff;
+.card-item {
+    background-color: rgb(235, 222, 222);
     width: auto;
     height: auto;
     border-radius: 10px;
